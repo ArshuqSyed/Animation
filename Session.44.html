@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(navy,rgb(255, 123, 0));
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+        h1 {
+            
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><u>Javascript BOM<br>(Browser Object model)</u></h1>
+    </header>
+    <h1>Window</h1>
+    <h2>Window Height</h2>
+    <h3 id="ash"></h3>
+    <h2>Window width</h2>
+    <h3 id="ashu"></h3>
+    <h1>Screen</h1>
+    <h2>Screen width</h2>
+    <h3 id="arshu"></h3>
+    <h2>Screen Height</h2>
+    <h3 id="arshu1"></h3>
+    <h1>Location</h1>
+    <h2>href</h2>
+    <h3 id="href"></h3>
+    <h2>path</h2>
+    <h3 id="path"></h3>
+    <h2>assign</h2>
+    <button onclick="google()"> Go go to google</button>
+    <h1>History</h1>
+    <button onclick="back()">back</button>
+    <h2>forward</h2>
+    <button onclick="forward()">Next</button>
+</body>
+<script>
+    function forward(){
+        window.history.forward();
+    }
+    function back(){
+        window.history.back();
+    }
+    function google() {
+        window.location.assign("https://www.google.com/")
+    }
+    document.getElementById("path").innerText = 
+    window.location.pathname;
+    document.getElementById("ash").innerText =
+    window.innerHeight;
+    document.getElementById("ashu").innerText =
+    window.innerWidth;
+    document.getElementById("arshu").innerText = 
+    screen.width;
+    document.getElementById("arshu1").innerText = 
+    screen.height;
+    document.getElementById("href").innerText = 
+    window.location.href;
+</script>
+</html>
